@@ -1,6 +1,3 @@
-console.log("Linked.");
-
-// Dramatis Personae
 var hobbits = [
   'Frodo Baggins',
   'Samwise \'Sam\' Gamgee',
@@ -21,13 +18,39 @@ var body = document.body;
 var section = '<section></section>';
 
 function makeMiddleEarth() {
-  // your answers here
+  
+  // create a section tag with an id of `middle-earth`
+  let $newSection = $('<section>').attr("id",'middle-earth');
+  
+  // add each land as an `article` tag
+  for(let i = 0; i < lands.length; i++) {
+
+    // inside each `article` tag include an `h1` with the name of the land
+    let $newArticle = $('<article>').addClass(lands[i]);
+    let $newH1 = $('<h1>').text(lands[i]);
+    $newArticle.append($newH1);
+    $newSection.append($newArticle)
+  }
+
+  // append `middle-earth` to your document `body`
+  $('body').append($newSection);
 }
 
 makeMiddleEarth();
 
 function makeHobbits(){
-  // your answers here
+
+  // display an `unordered list` of hobbits in the shire
+  // (which is the second article tag on the page)
+  // give each hobbit a class of `hobbit`
+  let $newList = $('<ul>');
+
+  // console.log($newList)
+  for(let i = 0; i < hobbits.length; i++){
+    let $newItem = $('<li>').addClass('hobbit').text(hobbits[i])
+    $newList.append($newItem)
+  }
+  $('.The.Shire').append($newList)
 }
 
 makeHobbits();
