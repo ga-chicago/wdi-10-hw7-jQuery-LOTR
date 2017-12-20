@@ -66,7 +66,8 @@ function makeBuddies(){
   $($aside).append($ul);
    // attach an `unordered list` of the `'buddies'` in the aside
    for (var i = 0; i < buddies.length; i++) {
-     $($ul).append("<li>"+buddies[i]+"</li>")
+    let $buddy = $("<li>"+buddies[i]+"</li>").addClass("buddy");
+     $($ul).append($buddy)
    };
    // insert your aside as a child element of `rivendell`
    let $rivendell = $("#middle-earth").children()[1];
@@ -101,23 +102,32 @@ function forgeTheFellowship() {
 
    // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
    // after each character is added make an alert that they // have joined your party
-  for (var i = 0; i < hobbits.length; i++) {
-    let $hobbit = $("<p>"+hobbits[i]+"</p>");
+  let $hobbitsList = $(".hobbit");
+ 
+  for (var i = 0; i < $hobbitsList.length; i++) {
+    let $hobbit = $($hobbitsList[i]);
     $(".the-fellowship").append($hobbit);
-    alert(hobbits[i]+" has joined the party!")
+    alert($hobbit.text() + " has joined the party!")
   }
-  for (var i = 0; i < buddies.length; i++) {
-    let $buddy = $("<p>"+buddies[i]+"</p>");
+
+  let $buddiesList = $(".buddy");
+ 
+  for (var i = 0; i < $buddiesList.length; i++) {
+    let $buddy = $($buddiesList[i]);
     $(".the-fellowship").append($buddy);
-    alert(buddies[i]+" has joined the party!")
+    alert($buddy.text() + " has joined the party!")
   }
+  
 }
 
 forgeTheFellowship();
 
 function theBalrog(){
   // change the `'Gandalf'` text to `'Gandalf the White'`
+  let $gandolf = $(".buddy")[0];
+  $($gandolf).text("Gandalf the White");
    // apply the following style to the element, make the // background 'white', add a grey border
+  $($gandolf).css("background", "white").css("border", "grey");
 }
 
 theBalrog();
