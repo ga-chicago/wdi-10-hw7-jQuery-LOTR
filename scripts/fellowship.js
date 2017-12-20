@@ -45,7 +45,7 @@ function makeHobbits(){
   
   // console.log($newList)
   for(let i = 0; i < hobbits.length; i++){
-    let $newItem = $('<li>').addClass('hobbit').text(hobbits[i]);
+    let $newItem = $('<li>').addClass('hobbit').text(hobbits[i])
     $newList.append($newItem)
   }
   $('.The.Shire').append($newList)
@@ -140,7 +140,18 @@ function hornOfGondor() {
 hornOfGondor();
 
 function itsDangerousToGoAlone() {
-  // your answers here
+  // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+  let frodo = $('.hobbit')[0];
+  // console.log(frodo); 
+  let sam = $('.hobbit')[1];
+  // console.log(sam);  
+  $('.Mordor').append($(frodo));
+  $('.Mordor').append($(sam));
+
+  // add a div with an id of `'mount-doom'` to `Mordor`
+  let newDiv = $('<div>').attr('id', 'mount-doom');
+  $('.Mordor').append(newDiv)
+
 }
 
 itsDangerousToGoAlone();
