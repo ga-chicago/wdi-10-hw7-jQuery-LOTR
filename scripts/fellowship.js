@@ -98,7 +98,8 @@ function forgeTheFellowship() {
 forgeTheFellowship();
 
 function theBalrog(){
-  // your answers here
+  let gandalf = $('li')[0];
+  $(gandalf).text('Gandalf the White').css('background-color', 'white').css('border', '2px solid grey');
 }
 
 theBalrog();
