@@ -161,8 +161,15 @@ itsDangerousToGoAlone();
 
 function weWantsIt() {
   // Create a div with an id of `'gollum'` and add it to Mordor
+  let $gollum = $("<div>").attr("id","gollum");
+  let $mordor = $("article")[2];
+
+  $($mordor).append($gollum);
    // Remove `the ring` from `Frodo` and give it to `Gollum`
+   let $ring = $("#the-ring")
+   $($gollum).append($ring);
    // Move Gollum into Mount Doom
+   $("#mount-doom").append($gollum);
 }
 
 weWantsIt();
