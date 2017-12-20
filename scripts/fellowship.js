@@ -103,7 +103,17 @@ function leaveTheShire(){
 leaveTheShire();
 
 function forgeTheFellowship() {
-  // your answers here
+  // create a new div called `'the-fellowship'` within `rivendell`
+  let $newDiv = $('<div>').addClass('the-fellowship')
+  $('Rivendell').append($newDiv)
+  // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+  let newArray = $('li')
+  for(let i = 0; i < newArray.length; i++){
+    let newItem = newArray[i]
+    $('.the-fellowship').append($(newItem));
+    console.log($(newItem).text() + " has joined your party");
+  }
+  // after each character is added make an alert that they // have joined your party
 }
 
 forgeTheFellowship();
