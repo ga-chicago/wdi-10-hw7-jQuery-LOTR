@@ -95,9 +95,7 @@ beautifulStranger();
 function leaveTheShire(){
   // your answers here
   let $hobbitList = $('article.The.Shire li')
-
-  // for(let i = 0; i < hobbitList.length; i++){
-    $('.Rivendell').append($hobbitList)
+  $('.Rivendell').append($hobbitList)
 }
 
 leaveTheShire();
@@ -149,8 +147,8 @@ function itsDangerousToGoAlone() {
   $('.Mordor').append($(sam));
 
   // add a div with an id of `'mount-doom'` to `Mordor`
-  let newDiv = $('<div>').attr('id', 'mount-doom');
-  $('.Mordor').append(newDiv)
+  let $newDiv = $('<div>').attr('id', 'mount-doom');
+  $('.Mordor').append($newDiv)
 
 }
 
@@ -169,7 +167,10 @@ function weWantsIt() {
 weWantsIt();
 
 function thereAndBackAgain(){
-  // your answers here
+  // remove `Gollum` and `the Ring` from the document
+  $('#gollum').remove()
+   // Move all the `hobbits` back to `the shire`
+   $('.hobbit').appendTo($(".The.Shire"))
 }
 
 thereAndBackAgain();
