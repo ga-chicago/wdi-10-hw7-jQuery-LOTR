@@ -126,7 +126,11 @@ function itsDangerousToGoAlone() {
 itsDangerousToGoAlone();
 
 function weWantsIt() {
-  // your answers here
+  let $newDiv = $('<div>').attr('id','gollum');
+  let mordor = $('article')[2];
+  $(mordor).append($newDiv);
+  let $ring = $('#the-ring');
+  $newDiv.append($ring);
 }
 
 weWantsIt();
