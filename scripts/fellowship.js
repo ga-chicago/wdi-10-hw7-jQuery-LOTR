@@ -107,7 +107,7 @@ function forgeTheFellowship() {
   for (var i = 0; i < $hobbitsList.length; i++) {
     let $hobbit = $($hobbitsList[i]);
     $(".the-fellowship").append($hobbit);
-    alert($hobbit.text() + " has joined the party!")
+    // alert($hobbit.text() + " has joined the party!")
   }
 
   let $buddiesList = $(".buddy");
@@ -115,7 +115,7 @@ function forgeTheFellowship() {
   for (var i = 0; i < $buddiesList.length; i++) {
     let $buddy = $($buddiesList[i]);
     $(".the-fellowship").append($buddy);
-    alert($buddy.text() + " has joined the party!")
+    // alert($buddy.text() + " has joined the party!")
   }
   
 }
@@ -145,7 +145,16 @@ hornOfGondor();
 
 function itsDangerousToGoAlone() {
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+  let $frodo = $(".hobbit")[0];
+  let $sam = $(".hobbit")[1];
+  // console.log($(".hobbits"))
+  let $mordor = $("article")[2];
+
+  $($mordor).append($sam);
+  $($mordor).append($frodo);
    // add a div with an id of `'mount-doom'` to `Mordor`
+   let $doom = $("<div>").attr("id","mount-doom");
+   $($mordor).append($doom);
 }
 
 itsDangerousToGoAlone();
