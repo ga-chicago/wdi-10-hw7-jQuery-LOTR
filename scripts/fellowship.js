@@ -35,67 +35,88 @@ function makeMiddleEarth() {
 makeMiddleEarth();
 
 function makeHobbits(){
-  // your answers here
+  // display an `unordered list` of hobbits in the shire
+      // (which is the second article tag on the page)
+  let $shire = $("article").get(0);
+  let $newUl = $("<ul>").attr("id","hobbits");
+  $($shire).append($newUl);
+   // give each hobbit a class of `hobbit`
+   for (var i = 0; i < hobbits.length; i++) {
+     $("#hobbits").append("<li>"+hobbits[i]+"</li>");
+   }
 }
 
 makeHobbits();
 
 function keepItSecretKeepItSafe(){
-  // your answers here
+  // create a div with an id of `'the-ring'`
+   // give the div a class of `'magic-imbued-jewelry'`
+   // add the ring as a child of `Frodo`
 }
 
 keepItSecretKeepItSafe();
 
 function makeBuddies(){
-  // your answers here
+  // create an `aside` tag
+   // attach an `unordered list` of the `'buddies'` in the aside
+   // insert your aside as a child element of `rivendell`
 }
 
 makeBuddies();
 
 function beautifulStranger(){
-  // your answers here
+  // change the `'Strider'` text to `'Aragorn'`
 }
 
 beautifulStranger();
 
 function leaveTheShire(){
-  // your answers here
+  // assemble the `hobbits` and move them to `rivendell`
 }
 
 leaveTheShire();
 
 function forgeTheFellowship() {
-  // your answers here
+  // create a new div called `'the-fellowship'` within `rivendell`
+   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+   // after each character is added make an alert that they // have joined your party
 }
 
 forgeTheFellowship();
 
 function theBalrog(){
-  // your answers here
+  // change the `'Gandalf'` text to `'Gandalf the White'`
+   // apply the following style to the element, make the // background 'white', add a grey border
 }
 
 theBalrog();
 
 function hornOfGondor() {
-  // your answers here
+  // pop up an alert that the horn of gondor has been blown
+   // Boromir's been killed by the Uruk-hai!
+   // Remove `Boromir` from the Fellowship
 }
 
 hornOfGondor();
 
 function itsDangerousToGoAlone() {
-  // your answers here
+  // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+   // add a div with an id of `'mount-doom'` to `Mordor`
 }
 
 itsDangerousToGoAlone();
 
 function weWantsIt() {
-  // your answers here
+  // Create a div with an id of `'gollum'` and add it to Mordor
+   // Remove `the ring` from `Frodo` and give it to `Gollum`
+   // Move Gollum into Mount Doom
 }
 
 weWantsIt();
 
 function thereAndBackAgain(){
-  // your answers here
+  // remove `Gollum` and `the Ring` from the document
+   // Move all the `hobbits` back to `the shire`
 }
 
 thereAndBackAgain();
