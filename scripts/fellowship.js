@@ -25,7 +25,7 @@ function makeMiddleEarth() {
     let $newSection = $('<section>').attr("id",'middle-earth');
    // add each land as an `article` tag
     for(let i = 0; i < lands.length; i++) {
-      let $newArticle = $('<article>');
+      let $newArticle = $('<article>').addClass(lands[i]);
       let $newH1 = $('<h1>').text(lands[i]);
       $newArticle.append($newH1);
       $newSection.append($newArticle)
@@ -38,7 +38,17 @@ function makeMiddleEarth() {
 makeMiddleEarth();
 
 function makeHobbits(){
-  // your answers here
+  // display an `unordered list` of hobbits in the shire
+   // (which is the second article tag on the page)
+  // give each hobbit a class of `hobbit`
+  let $newList = $('<ul>');
+  
+  // console.log($newList)
+  for(let i = 0; i < hobbits.length; i++){
+    let $newItem = $('<li>').addClass('hobbit').text(hobbits[i]);
+    $newList.append($newItem)
+  }
+  $('.The.Shire').append($newList)
 }
 
 makeHobbits();
