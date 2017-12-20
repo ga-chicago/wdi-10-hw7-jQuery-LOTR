@@ -56,13 +56,14 @@ keepItSecretKeepItSafe();
 
 function makeBuddies(){
   let $newAside = $('<aside>');
-  let $newList = $("<ul>");
+  let $newList = $('<ul>');
+  let rivendell = $('article')[1];
   for(let i = 0; i < buddies.length; i++) {
      let $newItem = $('<li>').text(buddies[i]);
      $newList.append($newItem);
    }
-   $newAside.append($newList);
-   $('.Rivendell').append($newAside);
+  $newAside.append($newList);
+  $(rivendell).append($newAside);
 }
 
 makeBuddies();
@@ -83,7 +84,15 @@ function leaveTheShire(){
 leaveTheShire();
 
 function forgeTheFellowship() {
-  // your answers here
+  let $newDiv = $('<div>').addClass('the-fellowship');
+  let rivendell = $('article')[1];
+  $(rivendell).append($newDiv);
+
+  let array = $('li')
+  for(let i = 0; i < array.length; i++) {
+    let temp = array[i]
+    $('.the-fellowship').append($(temp));
+  }
 }
 
 forgeTheFellowship();
