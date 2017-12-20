@@ -107,7 +107,7 @@ function forgeTheFellowship() {
   for (var i = 0; i < $hobbitsList.length; i++) {
     let $hobbit = $($hobbitsList[i]);
     $(".the-fellowship").append($hobbit);
-    // alert($hobbit.text() + " has joined the party!")
+    alert($hobbit.text() + " has joined the party!")
   }
 
   let $buddiesList = $(".buddy");
@@ -115,7 +115,7 @@ function forgeTheFellowship() {
   for (var i = 0; i < $buddiesList.length; i++) {
     let $buddy = $($buddiesList[i]);
     $(".the-fellowship").append($buddy);
-    // alert($buddy.text() + " has joined the party!")
+    alert($buddy.text() + " has joined the party!")
   }
   
 }
@@ -176,7 +176,12 @@ weWantsIt();
 
 function thereAndBackAgain(){
   // remove `Gollum` and `the Ring` from the document
+  let $gollum = $("#gollum");
+  $($gollum).remove();
    // Move all the `hobbits` back to `the shire`
+   let $hobbits = $(".hobbit");
+   let $shire = $("article")[0];
+   $($shire).append($hobbits);
 }
 
 thereAndBackAgain();
