@@ -114,7 +114,13 @@ function hornOfGondor() {
 hornOfGondor();
 
 function itsDangerousToGoAlone() {
-  // your answers here
+  let frodo = $('.hobbit')[0];
+  let sam = $('.hobbit')[1];
+  let mordor = $('article')[2];
+  $(mordor).append($(frodo));
+  $(mordor).append($(sam));
+  let $newDiv = $('<div>').attr('id','mount-doom');
+  $(mordor).append($newDiv);
 }
 
 itsDangerousToGoAlone();
