@@ -119,7 +119,11 @@ function forgeTheFellowship() {
 forgeTheFellowship();
 
 function theBalrog(){
-  // your answers here
+  // change the `'Gandalf'` text to `'Gandalf the White'`
+    let gandalf = $('li')[0]
+    $(gandalf).text('Gandalf the white')
+   // apply the following style to the element, make the // background 'white', add a grey border
+   $(gandalf).css("background-color", "white").css("border", "2px grey solid")
 }
 
 theBalrog();
