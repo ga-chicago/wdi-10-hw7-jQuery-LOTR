@@ -37,7 +37,7 @@ makeMiddleEarth();
 function makeHobbits(){
   // display an `unordered list` of hobbits in the shire
       // (which is the second article tag on the page)
-  let $shire = $("article").get(0);
+  let $shire = $("article");
   let $newUl = $("<ul>").attr("id","hobbits");
   $($shire).append($newUl);
    // give each hobbit a class of `hobbit`
@@ -76,6 +76,8 @@ makeBuddies();
 
 function beautifulStranger(){
   // change the `'Strider'` text to `'Aragorn'`
+  let $strider = $("#buddies").children()[3];
+  $($strider).text("Aragorn")
 }
 
 beautifulStranger();
