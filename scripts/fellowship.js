@@ -21,13 +21,26 @@ var body = document.body;
 var section = '<section></section>';
 
 function makeMiddleEarth() {
-  // your answers here
+  let $newSection = $('<section>').attr('id','middle-earth');
+  for (let i = 0; i < lands.length; i++) {
+    let $newArticle = $('<article>');
+    let $newh1 = $('<h1>').text(lands[i]);
+    $newh1.appendTo($newArticle);
+    $newSection.append($newArticle);
+  }
+  $newSection.appendTo($('body'));
 }
 
 makeMiddleEarth();
 
 function makeHobbits(){
-  // your answers here
+  let $theShire = $('article')[0];
+  let $newUl = $('<ul>');
+  $theShire.append($newUl[0]);
+  for (let i = 0; i < hobbits.length; i++) {
+    let $newli = $('<li>').text(hobbits[i]);
+    $newUl.append($newli);
+  }
 }
 
 makeHobbits();
