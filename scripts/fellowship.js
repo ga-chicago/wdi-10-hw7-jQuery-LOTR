@@ -54,7 +54,15 @@ function makeHobbits(){
 makeHobbits();
 
 function keepItSecretKeepItSafe(){
-  // your answers here
+  // create a div with an id of `'the-ring'`
+    let $newDiv = $('<div>').attr("id", "the-ring");
+    console.log($newDiv)
+   // give the div a class of `'magic-imbued-jewelry'`
+    $newDiv.addClass('magic-imbued-jewelry');
+    console.log($newDiv)
+   // add the ring as a child of `Frodo`
+   let frodo = $('li')[0];
+   $(frodo).append($newDiv)
 }
 
 keepItSecretKeepItSafe();
