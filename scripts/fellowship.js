@@ -55,7 +55,14 @@ function keepItSecretKeepItSafe(){
 keepItSecretKeepItSafe();
 
 function makeBuddies(){
-  // your answers here
+  let $newAside = $('<aside>');
+  let $newList = $("<ul>");
+  for(let i = 0; i < buddies.length; i++) {
+     let $newItem = $('<li>').text(buddies[i]);
+     $newList.append($newItem);
+   }
+   $newAside.append($newList);
+   $('.Rivendell').append($newAside);
 }
 
 makeBuddies();
