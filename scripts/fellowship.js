@@ -136,7 +136,11 @@ function weWantsIt() {
 weWantsIt();
 
 function thereAndBackAgain(){
-  // your answers here
+  let $gollum = $('#gollum');
+  $gollum.remove();
+  let $allHobbits = $('.hobbit');
+  let theShire = $('article')[0];
+  $(theShire).append($allHobbits);
 }
 
 thereAndBackAgain();
