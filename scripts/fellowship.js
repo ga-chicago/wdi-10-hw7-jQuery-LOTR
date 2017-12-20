@@ -94,6 +94,10 @@ beautifulStranger();
 
 function leaveTheShire(){
   // your answers here
+  let $hobbitList = $('article.The.Shire li')
+
+  // for(let i = 0; i < hobbitList.length; i++){
+    $('.Rivendell').append($hobbitList)
 }
 
 leaveTheShire();
