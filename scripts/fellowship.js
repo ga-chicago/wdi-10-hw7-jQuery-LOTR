@@ -85,7 +85,9 @@ function makeBuddies(){
 makeBuddies();
 
 function beautifulStranger(){
-  // your answers here
+  // change the `'Strider'` text to `'Aragorn'`
+  let aragorn = $('li')[7];
+  $(aragorn).text("Aragorn");
 }
 
 beautifulStranger();
