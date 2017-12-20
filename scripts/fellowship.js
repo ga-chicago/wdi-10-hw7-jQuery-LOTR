@@ -42,7 +42,8 @@ function makeHobbits(){
   $($shire).append($newUl);
    // give each hobbit a class of `hobbit`
    for (var i = 0; i < hobbits.length; i++) {
-     $("#hobbits").append("<li>"+hobbits[i]+"</li>");
+    let $hobbit = $("<li>"+hobbits[i]+"</li>").addClass("hobbit");
+     $("#hobbits").append($hobbit);
    }
 }
 
@@ -50,8 +51,10 @@ makeHobbits();
 
 function keepItSecretKeepItSafe(){
   // create a div with an id of `'the-ring'`
+  let $ring = $("<div>").attr("id", "the-ring").addClass("magic-imbued-jewelry");
    // give the div a class of `'magic-imbued-jewelry'`
    // add the ring as a child of `Frodo`
+   $(".hobbit").first().append($ring);
 }
 
 keepItSecretKeepItSafe();
