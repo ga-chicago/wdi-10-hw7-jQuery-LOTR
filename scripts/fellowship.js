@@ -157,7 +157,13 @@ function itsDangerousToGoAlone() {
 itsDangerousToGoAlone();
 
 function weWantsIt() {
-  // your answers here
+  // Create a div with an id of `'gollum'` and add it to Mordor
+    let $newDiv = $('<div>').attr('id', 'gollum');
+    $('.Mordor').append($newDiv);
+   // Remove `the ring` from `Frodo` and give it to `Gollum`
+    $('.magic-imbued-jewelry').appendTo($('#gollum'));
+   // Move Gollum into Mount Doom
+    $('#mount-doom').append($('#gollum'))
 }
 
 weWantsIt();
