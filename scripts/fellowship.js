@@ -75,7 +75,9 @@ function beautifulStranger(){
 beautifulStranger();
 
 function leaveTheShire(){
-  // your answers here
+  let $allHobbits = $('.hobbit');
+  let rivendell = $('article')[1];
+  $(rivendell).append($allHobbits);
 }
 
 leaveTheShire();
