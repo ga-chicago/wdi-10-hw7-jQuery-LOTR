@@ -105,7 +105,10 @@ function theBalrog(){
 theBalrog();
 
 function hornOfGondor() {
-  // your answers here
+  alert('The horn of Gondor has been blown!');
+  alert("Boromir's been killed by Uruk-hai!");
+  let boromir = $('li')[4];
+  $(boromir).remove();
 }
 
 hornOfGondor();
