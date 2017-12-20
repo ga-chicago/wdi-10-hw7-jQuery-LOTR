@@ -36,9 +36,9 @@ makeMiddleEarth();
 function makeHobbits(){
   let $theShire = $('article')[0];
   let $newUl = $('<ul>');
-  $theShire.append($newUl[0]);
+  $($theShire).append($newUl);
   for (let i = 0; i < hobbits.length; i++) {
-    let $newli = $('<li>').text(hobbits[i]);
+    let $newli = $('<li>').text(hobbits[i]).addClass('hobbit');
     $newUl.append($newli);
   }
 }
@@ -46,7 +46,10 @@ function makeHobbits(){
 makeHobbits();
 
 function keepItSecretKeepItSafe(){
-  // your answers here
+  let $newDiv = $('<div>').attr('id','the-ring').addClass('magic-imbued-jewelry');
+  let $frodo = $('li')[0];
+  $($frodo).append($newDiv);
+  console.log($frodo);
 }
 
 keepItSecretKeepItSafe();
