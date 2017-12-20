@@ -37,7 +37,7 @@ makeMiddleEarth();
 function makeHobbits(){
   // display an `unordered list` of hobbits in the shire
       // (which is the second article tag on the page)
-  let $shire = $("article");
+  let $shire = $("#middle-earth").children()[0];
   let $newUl = $("<ul>").attr("id","hobbits");
   $($shire).append($newUl);
    // give each hobbit a class of `hobbit`
@@ -69,7 +69,8 @@ function makeBuddies(){
      $($ul).append("<li>"+buddies[i]+"</li>")
    };
    // insert your aside as a child element of `rivendell`
-   $("article").next().append($aside);
+   let $rivendell = $("#middle-earth").children()[1];
+   $($rivendell).append($aside);
 }
 
 makeBuddies();
@@ -84,6 +85,10 @@ beautifulStranger();
 
 function leaveTheShire(){
   // assemble the `hobbits` and move them to `rivendell`
+  let $hobbits = $("#hobbits");
+  let $rivendell = $("#middle-earth").children()[1];
+  $($rivendell).append($hobbits);
+
 }
 
 leaveTheShire();
