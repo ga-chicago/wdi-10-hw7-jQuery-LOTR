@@ -68,7 +68,8 @@ function makeBuddies(){
 makeBuddies();
 
 function beautifulStranger(){
-  // your answers here
+  let stranger = $('li')[7];
+  $(stranger).text('Aragorn');
 }
 
 beautifulStranger();
