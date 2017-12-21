@@ -138,7 +138,7 @@ theBalrog();
 
 function hornOfGondor() {
    // pop up an alert that the horn of gondor has been blown
-   alert('The Horn of Gondor has been blown!')
+   // alert('The Horn of Gondor has been blown!')
    // Boromir's been killed by the Uruk-hai!
    // Remove `Boromir` from the Fellowship
    // get boromir and remove him from the fellowship
@@ -162,7 +162,12 @@ function itsDangerousToGoAlone() {
 itsDangerousToGoAlone();
 
 function weWantsIt() {
-  // your answers here
+   // Create a div with an id of `'gollum'` and add it to Mordor
+   let $gollum = $('<div id="gollum"></div>')
+   // Remove `the ring` from `Frodo` and give it to `Gollum`
+   $gollum.append($('.magic-imbued-jewelry'))
+   // Move Gollum into Mount Doom
+   $gollum.appendTo($('#mount-doom'))
 }
 
 weWantsIt();
