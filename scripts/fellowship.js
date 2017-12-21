@@ -118,8 +118,8 @@ function forgeTheFellowship() {
    let $partyMembers = $('li')
    // console.log($partyMembers.length)
    for(let i = 0; i < $partyMembers.length; i++) {
-   // after each character is added make an alert that they // have joined your party
-     // alert($partyMembers.eq(i).text() + ' has joined the party!')
+     // after each character is added make an alert that they // have joined your party
+     alert($partyMembers.eq(i).text() + ' has joined the party!')
      $theFellowship.append($partyMembers[i])
    }
    $theFellowship.appendTo($('article').eq(1))
@@ -138,7 +138,7 @@ theBalrog();
 
 function hornOfGondor() {
    // pop up an alert that the horn of gondor has been blown
-   // alert('The Horn of Gondor has been blown!')
+   alert('The Horn of Gondor has been blown!')
    // Boromir's been killed by the Uruk-hai!
    // Remove `Boromir` from the Fellowship
    // get boromir and remove him from the fellowship
@@ -173,7 +173,10 @@ function weWantsIt() {
 weWantsIt();
 
 function thereAndBackAgain(){
-  // your answers here
+   // remove `Gollum` and `the Ring` from the document
+   $('#gollum').remove()
+   // Move all the `hobbits` back to `the shire`
+   $('.hobbit').appendTo($('article').eq(0))
 }
 
 thereAndBackAgain();
