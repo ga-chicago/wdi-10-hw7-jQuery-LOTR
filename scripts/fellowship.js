@@ -39,7 +39,21 @@ function makeMiddleEarth() {
 makeMiddleEarth();
 
 function makeHobbits(){
-  // your answers here
+  // display an `unordered list` of hobbits in the shire
+  // create an unordered list
+  let $ul = $('<ul>');
+  for(let i = 0; i < hobbits.length; i++) {
+      // create a list item for each hobbit, give them a hobbit class
+      let $li = $('<li class="hobbit"></li>');
+      // add the hobbit's name as the text
+      $li.text(hobbits[i]);
+      // add the hobbit to the unordered list
+      $li.appendTo($ul);
+  }
+  // get the shire
+  // console.log($('article')[0])
+  // attach the hobbit list to the shire
+  $ul.appendTo($('article')[0])
 }
 
 makeHobbits();
