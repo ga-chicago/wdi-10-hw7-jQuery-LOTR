@@ -21,7 +21,19 @@ var body = document.body;
 var section = '<section></section>';
 
 function makeMiddleEarth() {
-  // your answers here
+   // create a section tag with an id of `middle-earth`
+   let $middleEarth = $('<section id="middle-earth"></section>')
+   for(let i = 0; i < lands.length; i++) {
+     // add each land as an `article` tag
+     let $article = $('<article>');
+     // inside each `article` tag include an `h1` with the name of the land
+     let $h1 = $('<h1>');
+     $h1.text(lands[i]);
+     $article.append($h1); 
+     $middleEarth.append($article);
+   }
+   // append `middle-earth` to your document `body`
+   $middleEarth.appendTo($('body'));
 }
 
 makeMiddleEarth();
@@ -91,3 +103,5 @@ function thereAndBackAgain(){
 }
 
 thereAndBackAgain();
+
+console.log(document);
