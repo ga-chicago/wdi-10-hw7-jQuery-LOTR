@@ -99,7 +99,14 @@ function beautifulStranger(){
 beautifulStranger();
 
 function leaveTheShire(){
-  // your answers here
+  // assemble the `hobbits` and move them to `rivendell`
+  // get the hobbits
+  // console.log($('.hobbit'))
+  $hobbits = $('.hobbit')
+  // fine rivendell
+  // console.log($('article')[1])
+  // send the hobbits to rivendell
+  $hobbits.appendTo($('article')[1])
 }
 
 leaveTheShire();
