@@ -59,12 +59,6 @@ function makeHobbits(){
 makeHobbits();
 
 function keepItSecretKeepItSafe(){
-  // your answers here
-}
-
-keepItSecretKeepItSafe();
-
-function makeBuddies(){
    // create a div with an id of `'the-ring'`
    // give the div a class of `'magic-imbued-jewelry'`
    let $theOneRing = $('<div class="magic-imbued-jewelry"></div>')
@@ -73,6 +67,25 @@ function makeBuddies(){
    // console.log($('.hobbit')[0])
    // attach the ring to Frodo
    $theOneRing.appendTo($('.hobbit')[0])
+}
+
+keepItSecretKeepItSafe();
+
+function makeBuddies(){
+   // create an `aside` tag
+   let $aside = $('<aside>');
+   // create and unordered list for the buddies
+   let $buddies = $('<ul>');
+   // attach an `unordered list` of the `'buddies'` in the aside
+   for (let i = 0; i < buddies.length; i++) {
+     let $buddy = $('<li>').text(buddies[i]);
+     $buddy.appendTo($buddies);
+   }
+   $buddies.appendTo($aside);
+   // get rivendell
+   // console.log($('article')[1]);
+   // insert your aside as a child element of `rivendell`
+   $aside.appendTo($('article')[1]);
 }
 
 makeBuddies();
