@@ -53,7 +53,7 @@ function makeHobbits(){
   // get the shire
   // console.log($('article')[0])
   // attach the hobbit list to the shire
-  $ul.appendTo($('article')[0])
+  $ul.appendTo($('article').eq(0))
 }
 
 makeHobbits();
@@ -66,7 +66,7 @@ function keepItSecretKeepItSafe(){
    // get Frodo
    // console.log($('.hobbit')[0])
    // attach the ring to Frodo
-   $theOneRing.appendTo($('.hobbit')[0])
+   $theOneRing.appendTo($('.hobbit').eq(0))
 }
 
 keepItSecretKeepItSafe();
@@ -85,7 +85,7 @@ function makeBuddies(){
    // get rivendell
    // console.log($('article')[1]);
    // insert your aside as a child element of `rivendell`
-   $aside.appendTo($('article')[1]);
+   $aside.appendTo($('article').eq(1));
 }
 
 makeBuddies();
@@ -106,26 +106,23 @@ function leaveTheShire(){
   // fine rivendell
   // console.log($('article')[1])
   // send the hobbits to rivendell
-  $hobbits.appendTo($('article')[1])
+  $hobbits.appendTo($('article').eq(1))
 }
 
 leaveTheShire();
 
 function forgeTheFellowship() {
    // create a new div called `'the-fellowship'` within `rivendell`
-   let $theFellowship = $('<div>')
+   let $theFellowship = $('<div class="the-fellowship"></div>')
    // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
    let $partyMembers = $('li')
    // console.log($partyMembers.length)
    for(let i = 0; i < $partyMembers.length; i++) {
    // after each character is added make an alert that they // have joined your party
-   $theFellowship.append($partyMembers[i])
-   // console.log($('li').text())
-   // THE ALERT DOESN'T WORK YET I'LL COME BACK TO IT
-   // alert($partyMembers.text() + ' has joined the party!')
-   // console.log($partyMembers[i])
+     // alert($partyMembers.eq(i).text() + ' has joined the party!')
+     $theFellowship.append($partyMembers[i])
    }
-   $theFellowship.appendTo($('article')[1])
+   $theFellowship.appendTo($('article').eq(1))
 }
 
 forgeTheFellowship();
@@ -151,7 +148,15 @@ function hornOfGondor() {
 hornOfGondor();
 
 function itsDangerousToGoAlone() {
-  // your answers here
+   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+   for(let i = 0; i < 2; i++){
+   // get frodo and sam
+   // run 2x to get sam and frodo, both will be at index 0
+   $('.hobbit').eq(0).appendTo($('article').eq(2))
+   }  
+   // add a div with an id of `'mount-doom'` to `Mordor`
+   let $mountDoom = $('<div id="mount-doom"></div>')
+   $mountDoom.appendTo($('article').eq(2))
 }
 
 itsDangerousToGoAlone();
