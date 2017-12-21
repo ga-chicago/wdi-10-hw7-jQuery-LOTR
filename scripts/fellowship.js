@@ -140,7 +140,12 @@ function theBalrog(){
 theBalrog();
 
 function hornOfGondor() {
-  // your answers here
+   // pop up an alert that the horn of gondor has been blown
+   alert('The Horn of Gondor has been blown!')
+   // Boromir's been killed by the Uruk-hai!
+   // Remove `Boromir` from the Fellowship
+   // get boromir and remove him from the fellowship
+   $("li:contains('Boromir')").remove()
 }
 
 hornOfGondor();
