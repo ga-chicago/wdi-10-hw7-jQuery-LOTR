@@ -112,13 +112,29 @@ function leaveTheShire(){
 leaveTheShire();
 
 function forgeTheFellowship() {
-  // your answers here
+   // create a new div called `'the-fellowship'` within `rivendell`
+   let $theFellowship = $('<div>')
+   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+   let $partyMembers = $('li')
+   // console.log($partyMembers.length)
+   for(let i = 0; i < $partyMembers.length; i++) {
+   // after each character is added make an alert that they // have joined your party
+   $theFellowship.append($partyMembers[i])
+   // console.log($('li').text())
+   // THE ALERT DOESN'T WORK YET I'LL COME BACK TO IT
+   // alert($partyMembers.text() + ' has joined the party!')
+   // console.log($partyMembers[i])
+   }
+   $theFellowship.appendTo($('article')[1])
 }
 
 forgeTheFellowship();
 
 function theBalrog(){
-  // your answers here
+   // change the `'Gandalf'` text to `'Gandalf the White'`
+   // apply the following style to the element, make the // background 'white', add a grey border
+   // get gandalf --------> change text -------> add css styling
+   $("li:contains('Gandalf')").text('Gandalf the white').css({'background-color': 'white', 'border': '1px solid grey'});
 }
 
 theBalrog();
