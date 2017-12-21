@@ -65,7 +65,14 @@ function keepItSecretKeepItSafe(){
 keepItSecretKeepItSafe();
 
 function makeBuddies(){
-  // your answers here
+   // create a div with an id of `'the-ring'`
+   // give the div a class of `'magic-imbued-jewelry'`
+   let $theOneRing = $('<div class="magic-imbued-jewelry"></div>')
+   // add the ring as a child of `Frodo`
+   // get Frodo
+   // console.log($('.hobbit')[0])
+   // attach the ring to Frodo
+   $theOneRing.appendTo($('.hobbit')[0])
 }
 
 makeBuddies();
