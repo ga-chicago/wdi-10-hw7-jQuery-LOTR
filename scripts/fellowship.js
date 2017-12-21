@@ -91,7 +91,9 @@ function makeBuddies(){
 makeBuddies();
 
 function beautifulStranger(){
-  // your answers here
+  // change the `'Strider'` text to `'Aragorn'`
+  // get the li that has Strider --->change to Aragorn
+  $("li:contains('Strider')").text('Aragorn')
 }
 
 beautifulStranger();
